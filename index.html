@@ -553,7 +553,10 @@ function renderVideos() {
     video.disablePictureInPicture = true;
 
     const source = document.createElement("source");
-    source.src = "model_outputs/combined/" + file;
+    // source.src = "model_outputs/combined/" + file;
+    const VIDEO_BASE_URL = "https://storage.googleapis.com/roboreason-view-videos-philip/model_outputs/combined/";
+    source.src = VIDEO_BASE_URL + file;
+
     source.type = "video/mp4";
 
     video.appendChild(source);
