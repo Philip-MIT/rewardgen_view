@@ -1,1 +1,1 @@
-[{"model": "roboreward", "rewards": [25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0], "task_description": "Insert the pipe into the opening."}]
+[{"model": "RoboReward", "rewards": [25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0], "task_description": "Insert the pipe into the opening."}]
