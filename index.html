@@ -1,3 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SOLE-R1  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+        text-align: center;
+      }
+
+      .container {
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Coming soon! <br>SOLE-R1 model checkpoints, data, video demos, and code will be available here shortly. </h1>
+    </div>
+  </body>
+</html> -->
+
+
+
+
+<!-- rm /data/sls/scratch/pschro/roboreason_view/index.html -->
+<!-- nano /data/sls/scratch/pschro/roboreason_view/index.html -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +64,7 @@
       content="https://generative-value-learning.github.io/static/images/icv/method.png"
     /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RoboReason</title>
+    <title>RewardGen</title>
 
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -52,6 +100,17 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
 <style>
+
+@supports (-webkit-hyphens: none) {
+  #taskDropdown,
+  #speedDropdown, 
+  #trajDropdown, 
+  #maxProgressDropdown {
+    font-size: 16px;
+    transform: scale(1.12);
+    transform-origin: left center;
+  }
+}
 body {
   font-family: system-ui;
   /* background: #f5f5f5; */
@@ -129,18 +188,23 @@ video::-webkit-media-controls-panel {
 <body>
 
     <section>
-      <h1 style="font-size:30px;font-weight: bold;">Video examples comparing foundation reward models (zero-shot)</h1>
+      <!-- <h1 style="font-size:30px;font-weight: bold;">Examples comparing SOLE-R1 vs Robometer, RoboReward, & TOPReward</h1> -->
+      <h1 style="font-size:22.5px;font-weight: bold; ">Examples (successful & unsuccessful) comparing SOLE-R1 vs Robometer, RoboReward, & TOPReward</h1>
+      <h1>
+       <!-- <hr style="border: 1px solid gray; margin: 20px 0;"> -->
+        <!-- decrease hr width -->
+         <hr style="border: 1px solid gray; margin: 20px 0; width: 90%; margin-left: auto; margin-right: auto;">
       <h1>
 
       </h1>
-      <br>
-      <br>
-      <br>
+      <!-- <br> -->
+      <!-- <br> -->
+      <!-- <br> -->
     </section>
     <section>
 
 
-              <label for="taskDropdown">Dataset selection:</label>
+    <label for="taskDropdown">Task:</label>
   <select id="taskDropdown" name="taskDropdown">
     <!-- <option>All</option> -->
     <!-- Category 3: RoboSuite -->
@@ -181,11 +245,11 @@ video::-webkit-media-controls-panel {
 
     <!-- Category 5: Real-world: SO-101 -->
     <optgroup label="Real-world: SO-101">
-      <option>jackvial_so101_pickplace_recap_merged_v2</option>
+      <option>Pick-place cube (Jack Vial)</option>
     </optgroup>
 
   </select>
-      &nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <label for="trajDropdown">Trajectory type:</label>
 <select id="trajDropdown" name="trajDropdown">
@@ -194,7 +258,7 @@ video::-webkit-media-controls-panel {
 </select>
 
 
-&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <span id="maxProgressControl">
   <label for="maxProgressDropdown">Max ground-truth progress:</label>
@@ -206,9 +270,9 @@ video::-webkit-media-controls-panel {
   <select id="videoNumberDropdown" name="videoNumberDropdown"></select>
 </span>
 
-&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<label for="speedDropdown">Playback speed:</label>
+<label for="speedDropdown">Speed:</label>
 <select id="speedDropdown" name="speedDropdown">
   <option value="0.25">0.25×</option>
   <option value="0.5">0.5×</option>
@@ -227,10 +291,10 @@ video::-webkit-media-controls-panel {
 
 
 <div id="video-container"></div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-
+ -->
 
 <script>
     
@@ -321,7 +385,7 @@ const taskToFolderMap = {
   "Rotate the knob to turn the stove on.": "libero/turn_on_stove",
   "Close the top drawer.": "libero/close_top_drawer",
 
-  "jackvial_so101_pickplace_recap_merged_v2":
+  "Pick-place cube (Jack Vial)":
     "real_world_so101/jackvial_so101_pickplace_recap_merged_v2"
 };
 
@@ -421,12 +485,16 @@ function populateMaxProgressDropdown(files) {
   maxProgressValues.forEach(value => {
     const option = document.createElement("option");
     option.value = String(value);
-    option.textContent = value+"%";
+    option.textContent = value + "%";
     maxProgressDropdown.appendChild(option);
   });
 
+  const preferredDefault = 38;
+
   if (maxProgressValues.includes(Number(currentValue))) {
     maxProgressDropdown.value = currentValue;
+  } else if (maxProgressValues.includes(preferredDefault)) {
+    maxProgressDropdown.value = String(preferredDefault);
   }
 }
 
@@ -477,7 +545,7 @@ if (selectedTraj === "Successful" ||
   selectedTask === "Open the microwave door." ||
   selectedTask === "Close the microwave door." ||
   selectedTask === "Rotate the knob to turn the stove on." ||
-  selectedTask === "jackvial_so101_pickplace_recap_merged_v2"
+  selectedTask === "Pick-place cube (Jack Vial)"
 ) {
     maxProgressControl.style.display = "none";
     videoNumberControl.style.display = "inline";
@@ -524,7 +592,7 @@ function renderVideos() {
   selectedTask === "Open the microwave door." ||
   selectedTask === "Close the microwave door." ||
   selectedTask === "Rotate the knob to turn the stove on." ||
-  selectedTask === "jackvial_so101_pickplace_recap_merged_v2" ) {
+  selectedTask === "Pick-place cube (Jack Vial)" ) {
     const selectedVideoNumber = Number(videoNumberDropdown.value);
 
     filteredFiles = filteredFiles.filter(file => {
@@ -604,4 +672,3 @@ renderVideos();
 
 </body>
 </html>
-
